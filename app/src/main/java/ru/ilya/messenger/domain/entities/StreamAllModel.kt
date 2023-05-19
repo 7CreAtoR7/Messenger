@@ -1,7 +1,7 @@
 package ru.ilya.messenger.domain.entities
 
-import ru.ilya.mymessenger.presentation.ui.channels.adapterChannels.expandableItem.ExpandableItem
-import ru.ilya.mymessenger.util.mapListTopicToListInnerItem
+import ru.ilya.messenger.presentation.ui.channels.adapterChannels.expandableItem.ExpandableItem
+import ru.ilya.messenger.util.mapListTopicToListInnerItem
 
 data class StreamAllModel(
 

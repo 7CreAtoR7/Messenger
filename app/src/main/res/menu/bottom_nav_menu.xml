@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_channelsFragment"
+        android:title="@string/title_channels"
+        android:icon="@drawable/megaphone"/>
+
+    <item
+        android:id="@+id/navigation_peopleFragment"
+        android:title="@string/title_people"
+        android:icon="@drawable/ic_people_24"/>
+
+    <item
+        android:id="@+id/navigation_profileFragment"
+        android:title="@string/title_profile"
+        android:icon="@drawable/ic_person_24"/>
+</menu>

@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">Messenger</string>
+    <string name="app_name">My Messenger</string>
+    <string name="user_name">Максим</string>
+    <string name="message">Привет!!!</string>
+    <string name="enter_message">Написать…</string>
+    <string name="hi_message">Привет, как дела?</string>
+    <string name="emoji_choose">Выбор эмодзи</string>
+    <string name="emoji_clown">\uD83E\uDD21</string>
+    <string name="title_chat">SingleChatFragment</string>
+    <string name="title_channels">Channels</string>
+    <string name="title_people">People</string>
+    <string name="title_profile">Profile</string>
+    <string name="base_user_name">Darrel Steward</string>
+    <string name="my_name">Ilya Lis</string>
+    <string name="base_written_status">In a meeting</string>
+    <string name="base_online_status">online</string>
+    <string name="logout_button">Log out</string>your_image
+    <string name="your_image">Your image</string>
+    <string name="search">Search…</string>
+    <string name="users">Users…</string>
+    <string name="stream_title_start_name">#%s</string>
+
 </resources>
