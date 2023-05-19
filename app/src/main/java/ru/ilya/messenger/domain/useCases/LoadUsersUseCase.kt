@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import ru.ilya.messenger.domain.entities.UserPeople
 import ru.ilya.messenger.domain.repository.MessengerRepository
 import javax.inject.Inject
-
+import ru.ilya.messenger.domain.entities.Result
 class LoadUsersUseCase @Inject constructor(
     private val messageStreamsRepository: MessengerRepository
 ) {
