@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Messenger</string>
+    <string name="app_name">Messenger</string>
     <string name="user_name">Максим</string>
     <string name="message">Привет!!!</string>
     <string name="enter_message">Написать…</string>

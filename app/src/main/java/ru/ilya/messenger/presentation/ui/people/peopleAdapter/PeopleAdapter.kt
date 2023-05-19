@@ -14,9 +14,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import ru.ilya.messenger.domain.entities.UserPeople
 import ru.ilya.messenger.R
-import ru.ilya.messenger.presentation.ui.people.peopleAdapter.UserDiffCallback
+import ru.ilya.messenger.domain.entities.UserPeople
 
 class PeopleAdapter : ListAdapter<UserPeople, PeopleAdapter.UserViewHolder>(UserDiffCallback()) {
 

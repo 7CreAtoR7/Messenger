@@ -9,7 +9,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import ru.ilya.messenger.data.network.ApiService
 import ru.ilya.messenger.data.network.ApiUrlProvider
 import ru.ilya.messenger.data.network.ApiUrlProviderImpl
-import ru.ilya.messenger.di.ApplicationScope
 
 @Module
 class NetworkModule {

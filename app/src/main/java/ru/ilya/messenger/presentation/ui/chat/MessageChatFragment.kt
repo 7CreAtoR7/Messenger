@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +19,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.Credentials
+import ru.ilya.messenger.R
 import ru.ilya.messenger.databinding.FragmentSingleChatBinding
+import ru.ilya.messenger.di.getAppComponent
 import ru.ilya.messenger.domain.entities.MessageModel
 import ru.ilya.messenger.domain.entities.TopicData
 import ru.ilya.messenger.presentation.customViewsEmojis.ReactionView
@@ -33,16 +34,14 @@ import ru.ilya.messenger.presentation.ui.chat.chatAdapter.notMyMessage.NotMyMess
 import ru.ilya.messenger.presentation.ui.chat.chatAdapter.utils.DelegateItem
 import ru.ilya.messenger.presentation.ui.chat.chatAdapter.utils.MessageChatAdapterDelegate
 import ru.ilya.messenger.presentation.ui.chat.chatAdapter.utils.pagination.PaginationAdapterHelper
+import ru.ilya.messenger.presentation.ui.chat.elm.ChatStoreFactory
 import ru.ilya.messenger.presentation.ui.chat.elm.models.ChatEffect
 import ru.ilya.messenger.presentation.ui.chat.elm.models.ChatEvent
 import ru.ilya.messenger.presentation.ui.chat.elm.models.ChatState
 import ru.ilya.messenger.util.Constants
-import ru.ilya.messenger.util.timestampToLocalDate
-import ru.ilya.messenger.R
-import ru.ilya.messenger.di.getAppComponent
-import ru.ilya.messenger.presentation.ui.chat.elm.ChatStoreFactory
 import ru.ilya.messenger.util.concatenateWithDate
 import ru.ilya.messenger.util.formatDateToDayMonthString
+import ru.ilya.messenger.util.timestampToLocalDate
 import vivid.money.elmslie.android.base.ElmFragment
 import vivid.money.elmslie.core.store.Store
 import javax.inject.Inject
@@ -288,7 +287,6 @@ class MessageChatFragment :
                 progressloader.visibility = View.VISIBLE
             }
             if (state.messagesFromDb.isNotEmpty()) {
-                Log.d("CHECKMESS2", "messagesFromDb")
                 adapter.submitList(prepareDataForRecyclerView(state.messagesFromDb))
                 binding.chatRecyclerView.scrollToPosition(adapter.itemCount - 1)
             }
@@ -304,16 +302,8 @@ class MessageChatFragment :
 
                 adapter.submitList(prepareDataForRecyclerView(state.messages))
                 if (state.messages.size < 50) {
-                    Log.d(
-                        "CHECKMESS2",
-                        "messages.size < 50: ${state.messages.size}, adapter.itemCount=${adapter.itemCount}"
-                    )
                     binding.chatRecyclerView.scrollToPosition(adapter.itemCount - 1)
                 } else {
-                    Log.d(
-                        "CHECKMESS2",
-                        "state.messages.size=${state.messages.size}, adapter.itemCount=${adapter.itemCount}"
-                    )
                     binding.chatRecyclerView.scrollToPosition(adapter.itemCount - 20)
                 }
 

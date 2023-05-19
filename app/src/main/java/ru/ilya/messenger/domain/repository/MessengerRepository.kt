@@ -4,7 +4,6 @@ import kotlinx.coroutines.flow.Flow
 import ru.ilya.messenger.data.network.messagesDTO.AddReactionResponseDto
 import ru.ilya.messenger.data.network.messagesDTO.DeleteReactionResponseDto
 import ru.ilya.messenger.domain.entities.*
-import ru.ilya.messenger.domain.entities.Result
 
 
 interface MessengerRepository {
