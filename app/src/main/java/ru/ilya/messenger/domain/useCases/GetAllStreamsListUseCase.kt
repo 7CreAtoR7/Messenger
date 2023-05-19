@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import ru.ilya.messenger.domain.entities.StreamAllModel
 import ru.ilya.messenger.domain.repository.MessengerRepository
 import javax.inject.Inject
-
+import ru.ilya.messenger.domain.entities.Result
 class GetAllStreamsListUseCase @Inject constructor(
     private val messageStreamsRepository: MessengerRepository
 ) {

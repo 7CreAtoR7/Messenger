@@ -3,7 +3,7 @@ package ru.ilya.messenger.domain.useCases
 import ru.ilya.messenger.domain.entities.TopicData
 import ru.ilya.messenger.domain.repository.MessengerRepository
 import javax.inject.Inject
-
+import ru.ilya.messenger.domain.entities.Result
 class GetStreamTopicsUseCase @Inject constructor(
     private val messageRepository: MessengerRepository
 ) {

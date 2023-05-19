@@ -3,6 +3,7 @@ package ru.ilya.messenger.domain.useCases
 import ru.ilya.messenger.domain.entities.AggregatedModel
 import ru.ilya.messenger.domain.repository.MessengerRepository
 import javax.inject.Inject
+import ru.ilya.messenger.domain.entities.Result
 
 class LoadUserStatusUseCase @Inject constructor(
     private val messageRepository: MessengerRepository

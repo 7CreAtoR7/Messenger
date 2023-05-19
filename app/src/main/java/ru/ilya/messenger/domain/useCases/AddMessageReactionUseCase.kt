@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import ru.ilya.messenger.data.network.messagesDTO.AddReactionResponseDto
 import ru.ilya.messenger.domain.repository.MessengerRepository
 import javax.inject.Inject
-
+import ru.ilya.messenger.domain.entities.Result
 class AddMessageReactionUseCase @Inject constructor(
     private val messageStreamsRepository: MessengerRepository
 ) {
