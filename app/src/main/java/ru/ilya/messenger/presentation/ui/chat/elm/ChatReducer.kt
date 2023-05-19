@@ -2,7 +2,6 @@ package ru.ilya.messenger.presentation.ui.chat.elm
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Log
 import com.google.gson.Gson
 import okhttp3.Credentials
 import ru.ilya.messenger.di.App
@@ -63,7 +62,6 @@ class ChatReducer :
                     ChannelsFragment.KEY_LAST_MESSAGE,
                     ChannelsFragment.DEFAULT_STREAM_TITLE
                 ) ?: ChannelsFragment.EMPTY_STREAM_TITLE
-            Log.d("CHECKMESS", "previousMessageId=$previousMessageId, idLastMessage=$idLastMessage")
             if (previousMessageId != idLastMessage) {
                 val narrowParam = listOf(
                     hashMapOf("operator" to "topic", "operand" to topicTitle),
@@ -124,7 +122,6 @@ class ChatReducer :
         is ChatEvent.Internal.MessagesLoaded -> {
             when (state.messagesCount) {
                 50 -> {
-                    Log.d("CHECKPICTURE", "Пришли сообщения ${event.items}")
                     state {
                         copy(
                             isLoading = false,

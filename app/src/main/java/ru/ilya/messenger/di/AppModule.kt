@@ -15,7 +15,6 @@ import ru.ilya.messenger.presentation.ui.chat.elm.ChatActor
 import ru.ilya.messenger.presentation.ui.chat.elm.ChatStoreFactory
 import ru.ilya.messenger.presentation.ui.people.elm.PeopleActor
 import ru.ilya.messenger.presentation.ui.people.elm.StoreFactory
-import ru.ilya.messenger.di.ApplicationScope
 
 @Module(includes = [AppModule.Bind::class])
 class AppModule {
@@ -29,16 +28,6 @@ class AppModule {
     }
 
     // People экран
-    @Provides
-    fun provideLoadUsersUseCase(repository: MessengerRepository): LoadUsersUseCase {
-        return LoadUsersUseCase(repository)
-    }
-
-    @Provides
-    fun provideLoadUserStatusUseCase(repository: MessengerRepository): LoadUserStatusUseCase {
-        return LoadUserStatusUseCase(repository)
-    }
-
     @Provides
     fun providePeopleActor(
         loadUsers: LoadUsersUseCase,
@@ -54,26 +43,6 @@ class AppModule {
     }
 
     // SubscribedStreams экран
-    @Provides
-    fun provideSubscribedStreamsUseCase(repository: MessengerRepository): GetSubscribedStreamsListUseCase {
-        return GetSubscribedStreamsListUseCase(repository)
-    }
-
-    @Provides
-    fun provideGetStreamsFromDbUseCase(repository: MessengerRepository): GetStreamsFromDbUseCase {
-        return GetStreamsFromDbUseCase(repository)
-    }
-
-    @Provides
-    fun provideAddStreamWithTopicsInDbUseCase(repository: MessengerRepository): AddStreamWithTopicsInDbUseCase {
-        return AddStreamWithTopicsInDbUseCase(repository)
-    }
-
-    @Provides
-    fun provideStreamTopicsUseCase(repository: MessengerRepository): GetStreamTopicsUseCase {
-        return GetStreamTopicsUseCase(repository)
-    }
-
     @Provides
     fun provideSubscribedActor(
         getSubscribed: GetSubscribedStreamsListUseCase,
@@ -97,10 +66,6 @@ class AppModule {
 
     // AllStreams экран
     @Provides
-    fun provideAllStreamsUseCase(repository: MessengerRepository): GetAllStreamsListUseCase =
-        GetAllStreamsListUseCase(repository)
-
-    @Provides
     fun provideAllActor(
         getAll: GetAllStreamsListUseCase,
         getTopics: GetStreamTopicsUseCase,
@@ -122,36 +87,6 @@ class AppModule {
     }
 
     // MessageChat экран
-    @Provides
-    fun provideGetTopicMessagesUseCase(repository: MessengerRepository): GetTopicMessagesUseCase {
-        return GetTopicMessagesUseCase(repository)
-    }
-
-    @Provides
-    fun provideSendMessageToTopicUseCase(repository: MessengerRepository): SendMessageToTopicUseCase {
-        return SendMessageToTopicUseCase(repository)
-    }
-
-    @Provides
-    fun provideAddMessageReactionUseCase(repository: MessengerRepository): AddMessageReactionUseCase {
-        return AddMessageReactionUseCase(repository)
-    }
-
-    @Provides
-    fun provideDeleteMessageReactionUseCase(repository: MessengerRepository): DeleteMessageReactionUseCase {
-        return DeleteMessageReactionUseCase(repository)
-    }
-
-    @Provides
-    fun provideGetMessagesFromDbUseCase(repository: MessengerRepository): GetMessagesFromDbUseCase {
-        return GetMessagesFromDbUseCase(repository)
-    }
-
-    @Provides
-    fun provideAddMessagesInDbUseCase(repository: MessengerRepository): AddMessagesInDbUseCase {
-        return AddMessagesInDbUseCase(repository)
-    }
-
     @Provides
     fun provideChatActor(
         getTopicMessagesUseCase: GetTopicMessagesUseCase,

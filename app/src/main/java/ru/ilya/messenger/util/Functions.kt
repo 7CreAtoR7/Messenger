@@ -1,10 +1,5 @@
 package ru.ilya.messenger.util
 
-import android.app.Activity
-import android.app.LauncherActivity
-import android.content.Intent
-import androidx.test.core.app.ActivityScenario
-import androidx.test.ext.junit.rules.ActivityScenarioRule
 import ru.ilya.messenger.domain.entities.MessageModel
 import ru.ilya.messenger.domain.entities.StreamAllModel
 import ru.ilya.messenger.domain.entities.TopicData
@@ -85,20 +80,4 @@ fun List<MessageModel>.concatenateWithDate(dates: List<DateModel>): List<Delegat
         }
     }
     return delegateItemList
-}
-
-// для ui теста
-inline fun <reified T : Activity> ActivityScenarioRule<T>.launchActivity(
-    intent: Intent? = null,
-    crossinline action: T.() -> Unit = {}
-) {
-    var scenario: ActivityScenario<T>? = null
-    try {
-        scenario = ActivityScenario.launch(intent)
-        scenario.onActivity { activity ->
-            activity.action()
-        }
-    } finally {
-        scenario?.close()
-    }
 }

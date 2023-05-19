@@ -1,7 +1,6 @@
 package ru.ilya.messenger.presentation.ui.people.elm
 
-import ru.ilya.messenger.presentation.ui.people.elm.PeopleActor
-import ru.ilya.messenger.presentation.ui.people.elm.models.*
+import ru.ilya.messenger.presentation.ui.people.elm.models.State
 import vivid.money.elmslie.coroutines.ElmStoreCompat
 import javax.inject.Inject
 

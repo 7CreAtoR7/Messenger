@@ -7,11 +7,9 @@ import ru.ilya.messenger.data.database.AppDatabase
 import ru.ilya.messenger.data.database.dao.AllStreamsDao
 import ru.ilya.messenger.data.database.dao.MessagesDao
 import ru.ilya.messenger.data.database.dao.SubscribedStreamsDao
-import ru.ilya.messenger.di.ApplicationScope
 
 @Module
 class DataModule {
-
 
     @ApplicationScope
     @Provides
