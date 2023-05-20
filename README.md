@@ -21,7 +21,7 @@ vivid-money - компания от бывших топ-менеджеров Т�
 Используемый стек технологий:
 - `Android SDK`
 - `Kotlin`
-- `Coroutines`
+- `Coroutines + Flow`
 - `Retrofit2`
 - `Okhttp3`
 - `Room db`
