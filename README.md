@@ -24,44 +24,44 @@ vivid-money - компания от бывших топ-менеджеров Т�
 
 На главном экране приложения отображается список стримов: на которые мы подписаны, а также все существующие в данной организации.
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/channels_screen.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/channels_screen.jpg">
 <br />
 Пока актуальные стримы подгружаются с сервера, отображаются закешированные в бд стримы. В случае проблем с интернет-соединением, выводится ошибка.
 У каждого стрима может быть неограниченное количество топиков:
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/channels_screen_topic.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/channels_screen_topic.jpg" width="500">
 <br />
 По клику на топик открывается чат этого топика:
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/chat_screen.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/chat_screen.jpg">
 <br />
 Есть возможность отправить сообщение:
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/sent_message_screen.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/sent_message_screen.jpg">
 <br />
 Добавить реакцию под сообщением (разработана **custom view** и **custom view group** для отображения блока с реакциями под сообщением). Либо по лонг тапу, тогда откроется bottom sheet с выбором эмодзи:
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/choose_reaction.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/choose_reaction.jpg">
 <br />
 Либо по клику на знак плюса (который появляется под сообщением, если есть как минимум 1 реакция от нас или от другого пользователя чата):
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/added_more_reaction.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/added_more_reaction.jpg">
 <br />
 
 Последние 50 сообщений каждого топика кешируются.
 
 Также, на первом экране имеется поиск по **названию стрима**:
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/search_stream.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/search_stream.jpg">
 <br />
 
 
 На втором экране отображается списогк пользователей в текущей организации. В процессе загрузки отображается shimmer:
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/loading_users_screen.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/loading_users_screen.jpg">
 <br />
 <p>
-<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/loaded_users_screen.png">
+<img src="https://raw.githubusercontent.com/7CreAtoR7/Messenger/readme/images/loaded_users_screen.jpg">
 <br />
 
 
